@@ -17,11 +17,12 @@ if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
 fi
 
 # ------------------ FZF configuration ------------------
-export FZF_DEFAULT_OPTS='
+export FZF_DEFAULT_OPTS="
   --height 40%
   --layout=reverse
   --border
-'
+  --color 'gutter:-1,pointer:green'
+"
 export FZF_CTRL_R_OPTS="--height 40% --style minimal --input-label ' History '"
 
 # ------------------ Zinit ------------------
