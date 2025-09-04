@@ -24,6 +24,11 @@ stow_config_root() {
 
 stow_config_folders
 stow_config_root
-
+#
 # Return to original state
-git reset --hard
+read -p "This will overwrite all files with the contents of the last commit in the current branch. Are you sure? [y/N] " confirm
+if [[ "$confirm" =~ ^[Yy]$ ]]; then
+  git reset --hard
+else
+  echo "Files were not overwritten."
+fi
