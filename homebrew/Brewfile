@@ -1,0 +1,33 @@
+tap "charmbracelet/tap"
+tap "oven-sh/bun"
+tap "sst/tap"
+# Modern, maintained replacement for ls
+brew "eza"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Simple terminal UI for git commands
+brew "lazygit"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Platform built on V8 to build network applications
+brew "node"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Smart session manager for the terminal
+brew "sesh"
+# Terminal multiplexer
+brew "tmux"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# GPU-based terminal emulator
+cask "kitty"
+# Music streaming service
+cask "spotify"
+# Gecko based web browser
+cask "zen"
