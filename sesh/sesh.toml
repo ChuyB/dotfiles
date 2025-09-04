@@ -1,0 +1,34 @@
+[default_session]
+startup_command = "nvim -c ':Oil'"
+preview_command = "eza --git --color=always --group-directories-first --icons {}"
+
+[[session]]
+name = "Dotfiles"
+path = "~/.dotfiles"
+startup_command = "nvim -c ':Oil'"
+
+[[session]]
+name = "Nvim Config"
+path = "~/.dotfiles/nvim"
+startup_command = "nvim -c ':Oil'"
+
+[[session]]
+name = "Tmux Config"
+path = "~/.dotfiles/tmux"
+startup_command = "nvim .tmux.conf"
+preview_command = "bat --color=always ~/.dotfiles/.tmux.conf"
+
+[[session]]
+name = "Zsh Config"
+path = "~/.dotfiles/zsh"
+startup_command = "nvim .zshrc"
+preview_command = "bat --color=always ~/.dotfiles/.zshrc"
+
+[[session]]
+name = "App Salud Mental"
+path = "~/Code/app_salud_mental"
+startup_command = "nvim lib/main.dart" 
+windows = [ "Run" ]
+
+[[window]]
+name = "Run"

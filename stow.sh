@@ -1,6 +1,7 @@
 target_dir="$HOME/.config"
 
 stow_targets_folders=(
+  sesh
   ghostty
 )
 
