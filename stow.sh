@@ -13,7 +13,11 @@ stow_targets_root=(
 
 stow_config_folders() {
   for target in "${stow_targets_folders[@]}"; do
-    stow --adopt -t "$target_dir/$target" "$target"
+    dest="$target_dir/$target"
+    if [ ! -d "$dest" ]; then
+      mkdir -p "$dest"
+    fi
+    stow --adopt -t "$dest" "$target"
   done
 }
 
