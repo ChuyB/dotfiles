@@ -25,6 +25,12 @@ startup_command = "nvim .zshrc"
 preview_command = "bat --color=always ~/.dotfiles/.zshrc"
 
 [[session]]
+name = "Ghostty Config"
+path = "~/.dotfiles/ghostty"
+startup_command = "nvim config"
+preview_command = "bat --color=always ~/.dotfiles/ghostty/config"
+
+[[session]]
 name = "App Salud Mental"
 path = "~/Code/app_salud_mental"
 startup_command = "nvim lib/main.dart" 
