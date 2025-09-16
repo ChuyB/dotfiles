@@ -1,16 +1,16 @@
 [default_session]
-startup_command = "nvim -c ':Oil'"
+startup_command = "nvim ."
 preview_command = "eza --git --color=always --group-directories-first --icons {}"
 
 [[session]]
 name = "Dotfiles"
 path = "~/.dotfiles"
-startup_command = "nvim -c ':Oil'"
+startup_command = "nvim ."
 
 [[session]]
 name = "Nvim Config"
 path = "~/.config/nvim"
-startup_command = "nvim -c ':Oil'"
+startup_command = "nvim ."
 
 [[session]]
 name = "Tmux Config"
