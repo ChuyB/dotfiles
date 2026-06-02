@@ -1,14 +1,14 @@
 window-width = 120
 window-height = 37
-window-padding-x = 14
-window-padding-y = 14
+window-padding-x = 40
+window-padding-y = 40
 
 macos-titlebar-style = transparent
 
 theme = One Double Dark
-background = #101010
-background-opacity = 0.6
-background-blur = 50
+background = #1d2021
+background-opacity = 0.8
+background-blur = 100
 
 font-family = 0xProto
 
