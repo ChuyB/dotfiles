@@ -7,7 +7,7 @@ macos-titlebar-style = transparent
 
 theme = One Double Dark
 background = #1d2021
-background-opacity = 0.5
+background-opacity = 0.8
 background-blur = 100
 
 font-family = 0xProto
