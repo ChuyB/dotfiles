@@ -1,0 +1,10 @@
+{{- $osId := .chezmoi.os -}}
+{{- $usesHyprland := false -}}
+
+{{- if eq $osId "linux" -}}
+{{- $usesHyprland = promptBoolOnce . "usesHyprland" "Are you using Hyprland in this Linux system? [y/n]" true -}}
+{{- end -}}
+
+[data]
+    os = {{ $osId | quote }}
+    usesHyprland = {{ $usesHyprland }}

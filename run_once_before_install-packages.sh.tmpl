@@ -1,0 +1,49 @@
+#!/bin/bash
+
+echo "======================================================"
+echo "   Verifying system dependencies for dotfiles setup   "
+echo "======================================================"
+
+# Base dependencies for the dotfiles setup
+dependencies=("nvim" "tmux" "ghostty" "git")
+
+# Inyect Hyprland specific dependencies if the user is using Hyprland
+{{ if (index . "usesHyprland") }}
+echo "🔹 Hyprland detected. Adding Hyprland-specific dependencies..."
+dependencies+=("hyprland" "waybar" "rofi") 
+{{ end }}
+
+for cmd in "${dependencies[@]}"; do
+    if ! command -v "$cmd" &> /dev/null; then
+        echo "❌ $cmd is not installed."
+        
+        {{ if eq .chezmoi.os "darwin" }}
+            if command -v brew &> /dev/null; then
+                echo "📦 Trying to install $cmd using Homebrew..."
+                if [ "$cmd" == "ghostty" ]; then
+                    brew install --cask ghostty
+                else
+                    brew install "$cmd"
+                fi
+            else
+                echo "⚠️ Homebrew is not installed. Install $cmd manually."
+            fi
+        {{ else if eq .chezmoi.os "linux" }}
+            # Check if Arch Linux or Debian-based system
+            if command -v pacman &> /dev/null; then
+                echo "📦 Trying to install $cmd using pacman..."
+                sudo pacman -S --noconfirm "$cmd"
+            elif command -v apt-get &> /dev/null; then
+                echo "📦 Trying to install $cmd using apt..."
+                sudo apt-get update && sudo apt-get install -y "$cmd"
+            else
+                echo "⚠️ No supported package manager found. Install $cmd manually."
+            fi
+        {{ end }}
+    else
+        echo "✅ $cmd already installed!."
+    fi
+done
+
+echo "========================================="
+
