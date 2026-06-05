@@ -5,12 +5,12 @@ echo "   Verifying system dependencies for dotfiles setup   "
 echo "======================================================"
 
 # Base dependencies for the dotfiles setup
-dependencies=("nvim" "tmux" "ghostty" "git")
+dependencies=("nvim" "tmux" "ghostty" "git" "nodejs")
 
 # Inyect Hyprland specific dependencies if the user is using Hyprland
 {{ if (index . "usesHyprland") }}
-echo "🔹 Hyprland detected. Adding Hyprland-specific dependencies..."
-dependencies+=("hyprland" "waybar" "rofi") 
+    echo "🔹 Hyprland detected. Adding Hyprland-specific dependencies..."
+    dependencies+=("swaync", "cliphist", "wl-clip-persist", "vicinae", "nautilus")
 {{ end }}
 
 for cmd in "${dependencies[@]}"; do

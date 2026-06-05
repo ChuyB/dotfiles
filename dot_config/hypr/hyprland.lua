@@ -1,0 +1,15 @@
+-- Entry point for configs
+
+require("modules.start")
+require("modules.input")
+require("modules.keybinds")
+require("modules.displays")
+require("modules.env-variables")
+require("modules.animations")
+require("modules.decorations")
+require("modules.window-rules")
+require("modules.layouts")
+require("modules.misc")
+require("modules.window-rules")
+require("modules.layer-rules")
+require("modules.workspaces")
