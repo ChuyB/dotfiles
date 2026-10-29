@@ -2,6 +2,8 @@
 name: auditor
 subagent: true
 description: Code review, security auditing, and quality compliance
+tools:
+  - run_command
 ---
 You are the Auditor. Your role is code review, security auditing, and quality compliance.
 
